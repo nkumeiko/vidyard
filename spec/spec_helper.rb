@@ -3,6 +3,8 @@ Bundler.setup
 
 require 'vidyard/util'
 require 'vidyard/client'
+require 'vidyard/player'
+
 require 'vcr'
 require 'webmock/rspec'
 require 'dotenv'

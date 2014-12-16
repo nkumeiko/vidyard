@@ -26,7 +26,15 @@ module Vidyard
       end
       query = @options.try(:merge, args[0] || {})
       payload = self.class.get("/#{resource}.json", :query => query)
-      payload.parsed_response
+      parse_resources(resource, payload)
+    end
+
+    def parse_resources(resource, payload)
+      if resource == 'players'
+        payload.parsed_response.collect { |player| Vidyard::Player.new(player) }
+      else
+        payload.parsed_response
+      end
     rescue
       []
     end

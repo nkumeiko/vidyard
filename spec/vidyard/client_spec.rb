@@ -23,5 +23,14 @@ describe Vidyard::Client do
     end
   end
 
+  it 'should return Vidyard::Player objects when querying players' do
+    VCR.use_cassette('players') do
+      @players = @vidyard.get_players()
+    end
+    @players.each do |player|
+      expect(player).to be_an_instance_of(Vidyard::Player)
+    end
+  end
+
 end
 
