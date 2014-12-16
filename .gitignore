@@ -1,0 +1,9 @@
+.DS_Store
+coverage
+pkg/
+.env
+.bundle
+.ruby-version
+*.gem
+tmp
+spec/fixtures/*.yml
