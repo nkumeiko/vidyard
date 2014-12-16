@@ -12,6 +12,6 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.homepage     = 'http://rubygems.org/gems/vidyard'
   s.license      = 'MIT'
-  s.add_dependency 'httparty', '~> 0.13.3'
-  s.add_dependency 'activesupport', '~> 4.1.5'
+  s.add_dependency 'httparty'
+  s.add_dependency 'activesupport'
 end
