@@ -21,6 +21,16 @@ Get a single resource like this...
 
 You get the idea.
 
+## Testing
+
+This project uses [Rspec](https://rubygems.org/gems/rspec), [VCR](https://rubygems.org/gems/vcr) and [Webmock](https://rubygems.org/gems/webmock) for testing.
+
+Before you run the test suite, you need to create a new `.env` file and add your API token, like so...
+
+    API_TOKEN=...
+
+Initial HTTP requests will be saved in `spec/fixtures`.
+
 ## License
 
 MIT License. Copyright 2014 [Taylor C. MacDonald](http://github.com/tcmacdonald).
