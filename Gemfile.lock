@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    vidyard (0.0.1)
+    vidyard (0.0.2)
       activesupport
       httparty
 

@@ -23,6 +23,16 @@ describe Vidyard::Client do
     end
   end
 
+  it 'should return an individual resource' do
+    VCR.use_cassette('videos') do
+      @video = @vidyard.get_videos().first
+    end
+    VCR.use_cassette('video') do
+      response = @vidyard.get_video(@video['id'])
+      expect(response).to_not be_nil
+    end
+  end
+
   it 'should return Vidyard::Player objects when querying players' do
     VCR.use_cassette('players') do
       @players = @vidyard.get_players()
